@@ -1,91 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-body{
-    background-color: #F6F2EB;
+.signinform{
+    width: 100%;
+    min-height: 88vh;
+    background-color: var(--primary-color);
+    border-radius: 20px 40px 40px 40px;
 }
-/* Kitchen sign in
-.kitchen_sign_in{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.signinform p{
+    font-size: 30px;
 }
-.kitchen_sign_in h1{
-    font-size: 50px;
-    font-family: 'Merriweather';
-    padding: 20px;
+.signinform .firstdetails p{
+    color: var(--text-color);
 }
-.kitchen_sign_in h1 span{
-    color:#800020 ;
-    font-family: 'Merriweather';
+.signinform .seconddetails p{
+    color: var(--primary-color);
 }
-.kitchen_sign_in input{
-    width: 100vw;
-    margin: 20px 0;
-    padding: 20px;
-    height: 35px;
-    outline: none;
+.signinform .firstdetails{
+    background-color: var(--primary-color);
+    padding: 50px 80px;
+    border-radius: 20px 0px 0px 20px;
+}
+.signinform .seconddetails{
+    background-color: var(--text-color);
+    padding: 50px 80px;
+    border-radius: 100px 20px 20px 0px;
+}
+.signinform input{
+    margin: 10px 0;
+    padding: 10px 0;
     border: none;
-    border-bottom:2px solid white ;
+    border-bottom: 1px solid var(--secondary-color);
+    outline: none;
     background: transparent;
 }
-.kitchen_sign_in input::placeholder{
-    font-size: 20px;
+.signinform .firstdetails input{
+    color: rgb(255, 255, 255);
 }
-.kitchen_sign_in label{
-    font-size: 20px;
-    color: #898989;
-    padding: 20px 0px 0px 20px;
+.signinform .firstdetails input::placeholder{
+    color: rgb(186, 186, 186);
 }
-.kitchen_sign_in input[type='file']{
-    border-bottom: none;
-    padding: 0px 20px;
+.signinform input::placeholder{
+    padding: 0 5px;
 }
-.kitchen_sign_in textarea{
-    width: 100vw;
-    padding: 20px;
-    outline: none;
+.namediv{
+    width: 100%;
+}
+.namediv input{
+    width: 50%;
+}
+.signinform button{
+    background-color: var(--primary-button-color);
     border: none;
-    border-bottom:2px solid white ;
-    background: transparent;
-}
-.kitchen_sign_in textarea::placeholder{
-    font-size: 20px;
-}
-.kitchen_sign_in button{
-    padding: 10px 30px;
-    font-size: larger;
     outline: none;
-    border: none;
-    background-color: #D4AF37;
-    color: white;
     border-radius: 8px;
-    margin: 20px;
+    padding: 10px;
+}
+.signinform button a{
+    text-decoration: none;
+    color: var(--text-color);
 }
 
-
-@media  only screen and (max-width: 600px) {
-    .kitchen_sign_in h1{
-        font-size: 35px;
-    }    
-    .kitchen_sign_in  label{
-        font-size: 15px;
+@media only screen and (max-width:576px){
+    .signinform{
+        margin-bottom: 50px;
     }
-    .kitchen_sign_in input::placeholder{
-        font-size: 15px;
+    .signinform .firstdetails{
+        padding: 20px 40px;
+        border-radius: 20px 20px 0px 0px;
     }
-    .kitchen_sign_in textarea::placeholder{
-        font-size: 15px;
+    .signinform .seconddetails{
+        padding: 20px 40px;
+        border-radius: 60px 0px 20px 20px;
+    } 
+    .signinform .seconddetails input{
+        display: inline;
     }
-    .kitchen_sign_in input{
-        padding: 10px;
-    }
-    .kitchen_sign_in textarea{
-        padding: 10px;
+    .signinform .seconddetails .check label{
+        display: inline;
+        margin-left: 2px;
     }
 }
- */
 
 /* Login kitchen page */
 .login-container{

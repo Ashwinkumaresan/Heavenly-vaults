@@ -1,6 +1,5 @@
 import { useState } from "react"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
 export const Home = () => {
 const[openPopup, setOpenPopup]=useState(false)
@@ -15,12 +14,17 @@ else
   document.body.classList.remove('active_modal');
 }
 
+// To scroll to top when order button triggers
+function Scroll() {
+  window.scrollTo(0, 0);
+}
+
   return (
     <>
     <div className="Home-page">
         <div className="image">
             <h1>Gourmet, from the clouds to your plate</h1>
-            <button onClick={()=> setOpenPopup(true)}>Order now</button>
+            <button href="#nav" onClick={()=>[ setOpenPopup(true),Scroll()]}>Order now</button>
         </div>
     </div>
     
@@ -76,12 +80,13 @@ else
                 <li> <span style={{fontWeight:600}}> Pre-Order Options:</span> Set up your orders in advance for special occasions or regular meals, and we’ll handle the rest.</li>
                 <li> <span style={{fontWeight:600}}> Live Cooking Sessions:</span> Join our live-streamed cooking sessions to see how your food is being prepared, offering transparency and trust.</li>
                 <li> <span style={{fontWeight:600}}> Interactive Experiences:</span> Connect with chefs, ask questions, and provide feedback during live sessions.</li>
-                <button className="fs-5" onClick={()=> setOpenPopup(true)}>Order now</button>
+                <button className="fs-5 mt-3" onClick={()=> setOpenPopup(true)}>Order now</button>
               </ul>
             </div>
         </div>
       </div>
-    </div>
+    </div>  
+    {/* ENd about sessions */}
     </>
   )
 }

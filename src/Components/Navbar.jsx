@@ -8,12 +8,12 @@ export const Navbar = () => {
         navRef.current.classList.toggle("responsive_nav");
     }
   return (
-  <header>
+  <header className="nav_head">
     <h3>Heavenly Vaults</h3>
-    <nav ref={navRef}>
+    <nav id="nav" ref={navRef}>
         <a href="/#" onClick={showNavbar}>Home</a>
         <a href="/#About" onClick={showNavbar}>About Us</a>
-        <a href="/#" onClick={showNavbar}>Latest</a>
+        <a href="/#latest" onClick={showNavbar}>Latest</a>
         <a href="/#" onClick={showNavbar}>Cart</a>
         <a href="/#" onClick={showNavbar}>Plan Access</a>
         <button onClick={showNavbar} className="nav-btn nav-cls-btn">

@@ -15,21 +15,22 @@
   --text-color:white;
   --background-color:#F6F2EB;
 }
-header{
+.nav_head{
   position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 70px;
   padding: 0 2rem;
   background-color: var(--primary-color);
   color: var(--text-color);
   z-index: 1;
 }
-header h3{
+.nav_head h3{
+  padding-top: 10px;
   font-family: 'Merriweather';
-  font-size: 40px;
+  font-size: 30px;
 }
 nav a{
     margin: 0 2rem;
@@ -40,7 +41,7 @@ nav a{
 nav a:hover{
   color: var(--secondary-color);
 }
-header .nav-btn{
+.nav_head .nav-btn{
   padding: 5px;
   cursor: pointer;
   background: transparent;
@@ -77,11 +78,11 @@ header .nav-btn{
   .btn-hide{
     display: none;
   }
-  header .nav-btn{
+  .nav_head .nav-btn{
     visibility: visible;
     opacity: 1;
   }
-  header nav{
+  .nav_head nav{
     position: fixed;
     top: 0;
     left: 0;
@@ -96,7 +97,7 @@ header .nav-btn{
     transition: 1s;
     transform: translateY(-100vh);
   }
-  header .responsive_nav{
+  .nav_head .responsive_nav{
     transform: none;
   }
   nav .nav-cls-btn{
@@ -109,7 +110,7 @@ header .nav-btn{
   }
 }
 @media only screen and (max-width: 700px){
-  Header h3{
+  .nav_head h3{
     font-size: 30px;
   }
 }
@@ -321,7 +322,7 @@ header .nav-btn{
 /* About css */
 .main_about{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 .about_image img{
   width: 100%;
@@ -330,7 +331,7 @@ header .nav-btn{
 }
 .about_data_{
   width: 100%;
-  height: 100vmin;
+  min-height: 100vh;
 }
 .about_list button{
   border: none;
@@ -339,7 +340,7 @@ header .nav-btn{
   padding:10px 30px;
   color: white;
   border-radius: 8px;
-  margin: 20px;
+  cursor: pointer;
 }
 .about_list button:hover{
   color: #D4AF37;
